@@ -74,4 +74,11 @@ export default defineNuxtConfig({
       standalone: false,
     },
   },
+
+  routeRules: {
+    // 预加载
+    '/': { prerender: true },
+    // 不使用ssr
+    '/hi/**': { ssr: false },
+  },
 })
