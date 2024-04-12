@@ -81,4 +81,13 @@ export default defineNuxtConfig({
     // 不使用ssr
     '/hi/**': { ssr: false },
   },
+
+  // 组件名命名策略 打开则仅以文件名为组件名
+  // components: [
+  //   {
+  //     path: '~/components/x',
+  //     pathPrefix: false,
+  //   },
+  // ],
+
 })
