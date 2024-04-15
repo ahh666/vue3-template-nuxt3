@@ -1,80 +1,50 @@
-<p align="center">
-<img src="https://user-images.githubusercontent.com/11247099/140462375-7b7ac4db-35b7-453c-8a05-13d8d20282c4.png" width="600"/>
-</p>
+## [`runtimeConfig`与`appConfig`](https://nuxt.com/docs/getting-started/configuration#runtimeconfig-vs-appconfig)
+
+两者都用于向应用程序的其余部分公开变量。使用场景：
+
+- `runtimeConfig`：环境变量构建后，有需要指定的私有或公共令牌。
+- `app.config`：在构建时确定的网站配置（如主题变体、标题）以及任何不敏感的项目配置。
+
+
+
+
+
+
 
 <h2 align="center">
-<a href="https://github.com/antfu/vitesse">Vitesse</a> for Nuxt 3
+Nuxt 3 template
 </h2><br>
 
-<p align="center">
-<br>
-<a href="https://vitesse-nuxt3.netlify.app/">🖥 Online Preview</a>
-<br><br>
-<a href="https://stackblitz.com/github/antfu/vitesse-nuxt3"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" alt=""></a>
-</p>
+## 特性
 
-## Features
 
-- 💚 [Nuxt 3](https://nuxt.com/) - SSR, ESR, File-based routing, components auto importing, modules, etc.
 
-- ⚡️ Vite - Instant HMR.
+- 💚 [Nuxt 3](https://nuxt.com/) - SSR、ESR、基于文件的路由、组件自动导入、模块等。
+- ⚡️ Vite - 即时 HMR。
+- 🎨 [UnoCSS](https://github.com/unocss/unocss) - 即时按需原子 CSS 引擎.
+- 😃 使用由 [UnoCSS](https://github.com/unocss/unocss) 提供支持的 Pure CSS 中任何图标集中的图标。
+- 🔥 语法。`<script setup>`
+- 🍍 [通过 Pinia 进行状态管理](https://github.com/vuejs/pinia)
+- 📑 [layout布局](https://github.com/antfu/vitesse-nuxt3/blob/main/layouts)。
+- 📥 API 自动导入 - 用于组合 API、VueUse 和自定义可组合项。
+- 🏎 零配置云功能和部署。
+- 🦾 TypeScript。
+- 📲 具有脱机支持和自动更新行为的 [PWA](https://github.com/vite-pwa/nuxt)。
 
-- 🎨 [UnoCSS](https://github.com/unocss/unocss) - The instant on-demand atomic CSS engine.
+## 插件
 
-- 😃 Use icons from any icon sets in Pure CSS, powered by [UnoCSS](https://github.com/unocss/unocss).
+- 
 
-- 🔥 The `<script setup>` syntax.
+### Nuxt 模块
 
-- 🍍 [State Management via Pinia](https://github.com/vuejs/pinia), see [./composables/user.ts](./composables/user.ts).
+- [VueUse](https://github.com/vueuse/vueuse) - 有用的组合 API 的集合。
+- [ColorMode](https://github.com/nuxt-modules/color-mode) - 使用Nuxt可以轻松实现具有自动检测功能的深色和浅色模式。
+- [UnoCSS](https://github.com/unocss/unocss) - 即时按需原子 CSS 引擎。
+- [Pinia](https://github.com/vuejs/pinia) - 直观、类型安全、轻便、灵活的 Vue 商店。
+- [VitePWA](https://github.com/vite-pwa/nuxt) - Nuxt 3 的零配置 PWA 插件.
+- [DevTools](https://github.com/nuxt/devtools) - 释放 Nuxt 开发人员体验。
 
-- 📑 [Layout system](./layouts).
+## 集成开发环境
 
-- 📥 APIs auto importing - for Composition API, VueUse and custom composables.
 
-- 🏎 Zero-config cloud functions and deploy.
 
-- 🦾 TypeScript, of course.
-
-- 📲 [PWA](https://github.com/vite-pwa/nuxt) with offline support and auto-update behavior.
-
-## Plugins
-
-### Nuxt Modules
-
-- [VueUse](https://github.com/vueuse/vueuse) - collection of useful composition APIs.
-- [ColorMode](https://github.com/nuxt-modules/color-mode) - dark and Light mode with auto detection made easy with Nuxt.
-- [UnoCSS](https://github.com/unocss/unocss) - the instant on-demand atomic CSS engine.
-- [Pinia](https://github.com/vuejs/pinia) - intuitive, type safe, light and flexible Store for Vue.
-- [VitePWA](https://github.com/vite-pwa/nuxt) - zero-config PWA Plugin for Nuxt 3.
-- [DevTools](https://github.com/nuxt/devtools) - unleash Nuxt Developer Experience.
-
-## IDE
-
-We recommend using [VS Code](https://code.visualstudio.com/) with [Volar](https://github.com/johnsoncodehk/volar) to get the best experience (You might want to disable [Vetur](https://vuejs.github.io/vetur/) if you have it).
-
-## Variations
-
-- [vitesse](https://github.com/antfu/vitesse) - Opinionated Vite Starter Template
-- [vitesse-lite](https://github.com/antfu/vitesse-lite) - Lightweight version of Vitesse
-- [vitesse-nuxt-bridge](https://github.com/antfu/vitesse-nuxt-bridge) - Vitesse for Nuxt 2 with Bridge
-- [vitesse-webext](https://github.com/antfu/vitesse-webext) - WebExtension Vite starter template
-
-## Try it now!
-
-### Online
-
-<a href="https://stackblitz.com/github/antfu/vitesse-nuxt3"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" alt=""></a>
-
-### GitHub Template
-
-[Create a repo from this template on GitHub](https://github.com/antfu/vitesse-nuxt3/generate).
-
-### Clone to local
-
-If you prefer to do it manually with the cleaner git history
-
-```bash
-npx degit antfu/vitesse-nuxt3 my-nuxt3-app
-cd my-nuxt3-app
-pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
-```

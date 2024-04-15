@@ -77,9 +77,9 @@ export default defineNuxtConfig({
 
   routeRules: {
     // 预加载
-    '/': { prerender: true },
+    // '/': { prerender: true },
     // 不使用ssr
-    '/hi/**': { ssr: false },
+    '/nossr/**': { ssr: false },
   },
 
   // 组件名命名策略 打开则仅以文件名为组件名
@@ -90,4 +90,18 @@ export default defineNuxtConfig({
   //   },
   // ],
 
+  // 环境变量配置
+  // 使用场景：环境变量构建后，有需要指定的私有或公共令牌。
+  // 使用：
+  // <script setup lang="ts">
+  // const runtimeConfig = useRuntimeConfig()
+  // </script>
+  runtimeConfig: {
+    // 仅服务端可读取
+    apiSecret: 'key661',
+    // 服务端和客户端都可读取
+    public: {
+      apiBase: '/api',
+    },
+  },
 })

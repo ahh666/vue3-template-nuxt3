@@ -1,5 +1,7 @@
 <script setup lang="ts">
 const online = useOnline()
+const runtimeConfig = useRuntimeConfig()
+console.log('runtimeConfig:', runtimeConfig)
 </script>
 
 <template>
