@@ -1,3 +1,11 @@
+/*
+ * @Author       : Archer<ahh666@qq.com>
+ * @Date         : 2024-04-12 16:33:09
+ * @LastEditors  : Archer<ahh666@qq.com>
+ * @LastEditTime : 2024-04-15 15:02:03
+ * @FilePath     : \vitesse-nuxt3\config\pwa.ts
+ * @Description  : Description
+ */
 import process from 'node:process'
 import type { ModuleOptions } from '@vite-pwa/nuxt'
 import { appDescription, appName } from '../constants/index'
