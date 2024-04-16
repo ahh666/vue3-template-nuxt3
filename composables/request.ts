@@ -2,13 +2,14 @@
  * @Author       : Archer<ahh666@qq.com>
  * @Date         : 2024-04-10 18:00:05
  * @LastEditors  : Archer<ahh666@qq.com>
- * @LastEditTime : 2024-04-12 11:01:43
+ * @LastEditTime : 2024-04-16 16:49:11
  * @FilePath     : \vitesse-nuxt3\composables\request.ts
  * @Description  : Description
  */
 
 import type { UseFetchOptions } from 'nuxt/app'
 import { RequestCodeEnum } from '../enums/interface'
+import { token } from '~/api/token'
 
 interface DefaultResult<T = any> {
   code: number
@@ -21,6 +22,8 @@ type UrlType = string | Request | Ref<string | Request> | (() => string | Reques
 
 type HttpOption<T> = UseFetchOptions<DefaultResult<T>>
 
+// ignoreCatch: true, // 不走统一拦截，一个法外之地的接口
+// ignoreGlobalErrorMessage: true, // 报错不提示
 interface RequestConfig<T = any> extends HttpOption<T> {
   // 忽略拦截，不走拦截，拥有 responseData，且 code !== 0 的情况下，直接返回 responseData，
   // 但是若无 responseData， 不设置 ignoreGlobalErrorMessage 也会报错
@@ -31,14 +34,18 @@ interface RequestConfig<T = any> extends HttpOption<T> {
 }
 
 async function requestHandler<T>(url: UrlType, params: any, options: RequestConfig<T>): Promise<DefaultResult<T> | T> {
-  const headers = useRequestHeaders(['cookie'])
+  const headers = {
+    Authorization: token,
+    LoginStatus: 'true',
+  }
   const method = ((options?.method || 'GET') as string).toUpperCase()
 
   const runtimeConfig = useRuntimeConfig()
   const nuxtApp = useNuxtApp()
   // const { $message, $login } = nuxtApp
-  const { apiBaseUrl } = runtimeConfig.public
-  const baseURL = `${apiBaseUrl}/mall/api`
+  const { apiBase } = runtimeConfig.public
+
+  const baseURL = `${apiBase}/api/`
 
   // 处理用户信息过期
   const hanlerTokenOverdue = async () => {
@@ -50,18 +57,23 @@ async function requestHandler<T>(url: UrlType, params: any, options: RequestConf
   const handlerError = (msg = '服务异常') => {
     if (import.meta.server)
       showError({ message: msg, statusCode: 500 })
-    // else TODO
-    //   $message.error(msg)
+    else
+      console.log('err:', msg)
   }
 
   const { data, error } = await useFetch(url, {
     baseURL,
     headers,
+    onRequest({ request, options }) {
+      // 请求拦截
+    },
     credentials: 'include',
     params: method === 'GET' ? params : undefined,
     body: method === 'POST' ? JSON.stringify(params) : undefined,
     ...options,
   })
+
+  console.log('res:', data.value)
 
   const responseData = data.value as DefaultResult<T>
   const { ignoreCatch, ignoreGlobalErrorMessage } = options // 忽略全局
