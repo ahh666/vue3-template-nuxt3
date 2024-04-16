@@ -3,6 +3,10 @@
     "*.css": "postcss"
   },
 
+  // ts补全
+  "typescript.format.enable": true,
+  "vetur.experimental.templateInterpolationService": true,
+
   // Enable the ESlint flat config support
   "eslint.experimental.useFlatConfig": true,
 
