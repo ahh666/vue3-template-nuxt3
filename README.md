@@ -24,7 +24,21 @@ vue3-template-nuxt3
 - Node版本 - 20.12.0
 - 使用 **pnpm** 管理依赖
 
+## 项目启动
+
+- `pnpm i`
+- `pnpm dev`
+
 ## 项目规范
+
+### 命名
+
+- component 文件夹下的组件命名采用 PascalBase 风格，其他一律为 camelCase 风格
+
+### CSS
+
+- 优先使用 unocss 方法
+- 比较难实现的必须使用 class 的，采用 [BEM](https://gitee.com/link?target=http%3A%2F%2Fgetbem.com%2F) 的命名规范：block-name -- element-name - modifier-name，也就是 `模块名--元素名-修饰器名`。
 
 ### `runtimeConfig`与`appConfig`
 
