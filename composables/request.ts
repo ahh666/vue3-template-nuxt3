@@ -8,8 +8,12 @@
  */
 
 import type { UseFetchOptions } from 'nuxt/app'
-import { RequestCodeEnum } from '../enums/interface'
+// import { RequestCodeEnum } from '../enums/interface'
 import { token } from '~/api/token'
+
+enum RequestCodeEnum {
+
+}
 
 interface DefaultResult<T = any> {
   code: number
