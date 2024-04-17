@@ -7,13 +7,10 @@
 
 
 
-
-
-
-
 <h2 align="center">
 Nuxt 3 template
 </h2><br>
+
 
 ## 特性
 
@@ -43,8 +40,6 @@ Nuxt 3 template
 - [Pinia](https://github.com/vuejs/pinia) - 直观、类型安全、轻便、灵活的 Vue 商店。
 - [VitePWA](https://github.com/vite-pwa/nuxt) - Nuxt 3 的零配置 PWA 插件.
 - [DevTools](https://github.com/nuxt/devtools) - 释放 Nuxt 开发人员体验。
-
-## 集成开发环境
 
 
 

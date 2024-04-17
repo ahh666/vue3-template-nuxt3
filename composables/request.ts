@@ -2,8 +2,8 @@
  * @Author       : Archer<ahh666@qq.com>
  * @Date         : 2024-04-10 18:00:05
  * @LastEditors  : Archer<ahh666@qq.com>
- * @LastEditTime : 2024-04-16 16:49:11
- * @FilePath     : \vitesse-nuxt3\composables\request.ts
+ * @LastEditTime : 2024-04-16 18:59:29
+ * @FilePath     : \vue3-template-nuxt3\composables\request.ts
  * @Description  : Description
  */
 
@@ -73,7 +73,7 @@ async function requestHandler<T>(url: UrlType, params: any, options: RequestConf
     ...options,
   })
 
-  console.log('res:', data.value)
+  console.log(url, data.value)
 
   const responseData = data.value as DefaultResult<T>
   const { ignoreCatch, ignoreGlobalErrorMessage } = options // 忽略全局

@@ -20,6 +20,7 @@ body,
   height: 100vh;
   margin: 0;
   padding: 0;
+  background-color: #f4f4f4;
 }
 
 html.dark {
