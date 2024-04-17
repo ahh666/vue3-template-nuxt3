@@ -2,7 +2,7 @@
  * @Author       : Archer<ahh666@qq.com>
  * @Date         : 2024-04-10 18:00:05
  * @LastEditors  : Archer<ahh666@qq.com>
- * @LastEditTime : 2024-04-16 18:59:29
+ * @LastEditTime : 2024-04-17 15:25:52
  * @FilePath     : \vue3-template-nuxt3\composables\request.ts
  * @Description  : Description
  */
@@ -67,7 +67,7 @@ async function requestHandler<T>(url: UrlType, params: any, options: RequestConf
     onRequest({ request, options }) {
       // 请求拦截
     },
-    credentials: 'include',
+    // credentials: 'include',
     params: method === 'GET' ? params : undefined,
     body: method === 'POST' ? JSON.stringify(params) : undefined,
     ...options,
