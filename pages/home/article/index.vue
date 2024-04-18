@@ -1,9 +1,9 @@
 <!--
  * @Author       : Archer<ahh666@qq.com>
- * @Date         : 2024-04-15 15:05:08
+ * @Date         : 2024-04-18 10:54:13
  * @LastEditors  : Archer<ahh666@qq.com>
- * @LastEditTime : 2024-04-17 11:24:55
- * @FilePath     : \vue3-template-nuxt3\pages\home\article.vue
+ * @LastEditTime : 2024-04-18 11:05:36
+ * @FilePath     : \vue3-template-nuxt3\pages\home\article\index.vue
  * @Description  : Description
 -->
 <script setup lang="ts">
@@ -34,7 +34,7 @@ watchEffect(async () => {
 const router = useRouter()
 function menuChange(cat_id = 0) {
   router.replace({
-    path: '/home/article',
+    path: '/home/article/list',
     query: {
       cat_id,
     },
@@ -69,22 +69,7 @@ function menuChange(cat_id = 0) {
       w-940px px-20px pt-40px pb-50px class="bg-#fff  text-left"
       border-rd="5px"
     >
-      <div
-        v-for="a in articleList" :key="a.id"
-        border-b="1px solid #f1f1f1"
-        px-30px py-0 flex items-center
-        justify-between h-70px
-      >
-        <div w-900px>
-          {{ a.title }}
-        </div>
-        <div>
-          {{ a.add_time }}
-        </div>
-        <div w-120px text-center>
-          查看
-        </div>
-      </div>
+      <NuxtPage />
     </div>
   </div>
 </template>
