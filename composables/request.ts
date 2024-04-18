@@ -2,19 +2,14 @@
  * @Author       : Archer<ahh666@qq.com>
  * @Date         : 2024-04-10 18:00:05
  * @LastEditors  : Archer<ahh666@qq.com>
- * @LastEditTime : 2024-04-17 16:24:33
+ * @LastEditTime : 2024-04-18 15:35:38
  * @FilePath     : \vue3-template-nuxt3\composables\request.ts
  * @Description  : Description
  */
 
 import type { UseFetchOptions } from 'nuxt/app'
 import { token } from '~/api/token'
-
-enum RequestCodeEnum {
-  SUCCESS = 200,
-  TOKEN_OVERDUE = 20002, // token 失效
-  INTERNAL_SERVER_ERROR = 500, // 服务异常
-}
+import { RequestCodeEnum } from '~/enums/request'
 
 interface DefaultResult<T = any> {
   code: number

@@ -1,3 +1,11 @@
+/*
+ * @Author       : Archer<ahh666@qq.com>
+ * @Date         : 2024-04-12 16:54:05
+ * @LastEditors  : Archer<ahh666@qq.com>
+ * @LastEditTime : 2024-04-18 15:40:38
+ * @FilePath     : \vue3-template-nuxt3\composables\user.ts
+ * @Description  : Description
+ */
 import { acceptHMRUpdate, defineStore } from 'pinia'
 
 export const useUserStore = defineStore('user', () => {
