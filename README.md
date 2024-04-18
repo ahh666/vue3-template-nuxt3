@@ -3,7 +3,7 @@ vue3-template-nuxt3
 </h2><br>
 ## 技术栈
 
-Vue3 + Vite + Nuxt + TS + Less + Pinia + Vueuse
+ **💥** Vue3 + Vite + Nuxt + TS + Less + Pinia + Vueuse 
 
 ## 特性
 
@@ -16,8 +16,8 @@ Vue3 + Vite + Nuxt + TS + Less + Pinia + Vueuse
 - 📑 [ layout布局](https://nuxt.com/docs/guide/directory-structure/layouts)
 - 📥 API 自动导入 - 用于组合 API、VueUse 和自定义可组合项。
 - 🏎 零配置云功能和部署。
-- 🦾 TypeScript
-- 🦾 ESLint。已内置规则且保存自动格式化
+- 🌞 TypeScript
+- 📒 ESLint。已内置规则且保存自动格式化
 - 📲 具有脱机支持和自动更新行为的 [PWA](https://github.com/vite-pwa/nuxt)。
 
 ## 环境要求
@@ -54,7 +54,7 @@ Vue3 + Vite + Nuxt + TS + Less + Pinia + Vueuse
 
 ### 一些操作规范
 
-- 封装 api 模块的时候， 仅在需要 ssr 的 api 使用 `ssrget` 、`ssrpost`  
+- 封装 api 模块的时候， 仅在需要 ssr 的 api 使用 `ssrget` 、`ssrpost`
 
 - `runtimeConfig`与`appConfig`
 
@@ -63,11 +63,34 @@ Vue3 + Vite + Nuxt + TS + Less + Pinia + Vueuse
   - `runtimeConfig`：环境变量构建后，有需要指定的私有或公共令牌。
   - `app.config`：在构建时确定的网站配置（如主题变量、标题）以及任何不敏感的项目配置。
 
+## 目录结构
 
+> Nuxt3 目录文档： [pages/ · Nuxt Directory Structure](https://nuxt.com/docs/guide/directory-structure/pages)
 
-## 项目目录结构
+主要目录描述： 
 
-- 基础目录文档： [pages/ · Nuxt Directory Structure](https://nuxt.com/docs/guide/directory-structure/pages)
-- types：各个文件、模块对应的 TS 类型编写
-- api：各个模块的 api 编写
-
+```bash
+vue3-template-nuxt3
+├── .vscode                       # vscode 配置
+├── config                        # 工程化构建相关配置
+├── api                           # 接口请求服务管理
+├── components                    # 项目组件
+├── composables                   # 响应式共享状态
+├── config                        # 工程化构建相关配置
+├── enums                         # 枚举管理
+├── layouts                       # 布局组件
+├── middleware                    # 路由中间件
+├── pages                         # 页面视图
+├── plugins                       # 项目公共插件
+├── public                        # 不需要工程化处理的静态资源
+├── server                        # 服务器端目录
+├── types                         # 各个模块对应的 TS 类型编写
+├── app.config.ts                 # 静态应用配置
+├── app.vue                       # 入口页面
+├── eslint.config.js              # eslint代码规范检查配置
+├── nuxt.config.ts                # 项目构建配置入口
+├── package.json                  # 项目包管理文件
+├── README.md                     # 项目说明
+├── tsconfig.json                 # TS编译的配置
+└── uno.config.ts                 # unocss配置   
+```
