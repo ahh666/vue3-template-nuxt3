@@ -3,7 +3,7 @@ vue3-template-nuxt3
 </h2><br>
 ## 技术栈
 
- **💥** Vue3 + Vite + Nuxt + TS + Less + Pinia + Vueuse 
+**💥** Vue3 + Vite + Nuxt + TS + Less + Pinia + Vueuse
 
 ## 特性
 
@@ -50,7 +50,7 @@ vue3-template-nuxt3
    - 优先使用 unocss 方法
    - 采用 [BEM](https://gitee.com/link?target=http%3A%2F%2Fgetbem.com%2F) 的命名规范：block-name -- element-name - modifier-name，也就是 `模块名--元素名-修饰器名`。
    - scss / less 中的变量、函数、混合 采用 `camelCase` 风格
-6. 需要 TS 类型的文件，在当前目录下新建同名 `.d.ts` 文件
+6. 需要 TS 类型的文件，在types目录下新建同名 `.d.ts` 文件
 
 ### 一些操作规范
 
@@ -67,7 +67,7 @@ vue3-template-nuxt3
 
 > Nuxt3 目录文档： [pages/ · Nuxt Directory Structure](https://nuxt.com/docs/guide/directory-structure/pages)
 
-主要目录描述： 
+主要目录描述：
 
 ```bash
 vue3-template-nuxt3
@@ -92,5 +92,5 @@ vue3-template-nuxt3
 ├── package.json                  # 项目包管理文件
 ├── README.md                     # 项目说明
 ├── tsconfig.json                 # TS编译的配置
-└── uno.config.ts                 # unocss配置   
+└── uno.config.ts                 # unocss配置
 ```
