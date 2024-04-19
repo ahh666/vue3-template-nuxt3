@@ -1,6 +1,7 @@
 <h2 align="center">
 vue3-template-nuxt3
 </h2><br>
+
 ## 技术栈
 
 **💥** Vue3 + Vite + Nuxt + TS + Less + Pinia + Vueuse
@@ -29,6 +30,9 @@ vue3-template-nuxt3
 
 ## 项目启动
 
+> pnpm 未安装，请先安装 `npm -g pnpm`
+
+- `git clone http://114.55.87.223/aihuanhuan/vue3-template-nuxt3.git`
 - `pnpm i`
 - `pnpm dev`
 

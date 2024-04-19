@@ -7,7 +7,7 @@
     "build:release": "nuxi build --dotenv .env.release",
     "build:test": "nuxi build --dotenv .env.test",
     "dev:pwa": "VITE_PLUGIN_PWA=true nuxi dev",
-    "dev": "nuxi dev",
+    "dev": "nuxi dev --dotenv .env",
     "generate": "nuxi generate",
     "prepare": "nuxi prepare",
     "start": "node .output/server/index.mjs",
