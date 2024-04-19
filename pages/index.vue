@@ -1,6 +1,8 @@
 <script setup lang="ts">
 const online = useOnline()
+const appConfig = useAppConfig()
 const runtimeConfig = useRuntimeConfig()
+console.log('appConfig:', appConfig)
 console.log('runtimeConfig:', runtimeConfig)
 </script>
 

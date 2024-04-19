@@ -3,7 +3,9 @@
   "private": true,
   "packageManager": "pnpm@8.15.6",
   "scripts": {
-    "build": "nuxi build",
+    "build": "nuxi build --dotenv .env.production",
+    "build:release": "nuxi build --dotenv .env.release",
+    "build:test": "nuxi build --dotenv .env.test",
     "dev:pwa": "VITE_PLUGIN_PWA=true nuxi dev",
     "dev": "nuxi dev",
     "generate": "nuxi generate",

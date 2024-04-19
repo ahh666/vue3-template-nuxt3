@@ -2,14 +2,14 @@
  * @Author       : Archer<ahh666@qq.com>
  * @Date         : 2024-04-10 18:00:05
  * @LastEditors  : Archer<ahh666@qq.com>
- * @LastEditTime : 2024-04-18 15:35:38
+ * @LastEditTime : 2024-04-19 14:44:20
  * @FilePath     : \vue3-template-nuxt3\composables\request.ts
  * @Description  : Description
  */
 
 import type { UseFetchOptions } from 'nuxt/app'
 import { token } from '~/api/token'
-import { RequestCodeEnum } from '~/enums/request'
+import { RequestCodeEnum } from '~/constants/enums'
 
 interface DefaultResult<T = any> {
   code: number
