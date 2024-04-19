@@ -23,7 +23,7 @@ vue3-template-nuxt3
 ## 环境要求
 
 - 使用 **Visual Studio Code (VS Code)** 进行代码编写
-- 安装 VSCode 插件： **Vue - Official、Vetur、UnoCSS、Prettier - Code formatter、ESLint**
+- 安装 VSCode 插件： **Vue - Official、Vetur、UnoCSS、To Unocss、Prettier - Code formatter、ESLint**
 - Node版本 - 20.12.0
 - 使用 **pnpm** 管理依赖
 
@@ -40,7 +40,7 @@ vue3-template-nuxt3
 2. 文件命名
    - component 文件夹下的组件命名采用 `PascalBase` 风格，其他一律为 `camelCase` 风格
 3. 变量命名
-   - 一律为 `camelCase` 风格（函数入参以后端给出的字段名为准）
+   - 变量一律为 `camelCase` 风格（函数入参以后端给出的字段名为准）
    - 布尔类型：需要一个标识变量含义的前缀，比如`has, is, wether, can, should`等
    - 数组/集合等复数形式：最好以`s`或`list`等能够标识复数形式的后缀结尾，标识当前变量是复数形式，提高可读性；
 4. 函数命名
@@ -48,8 +48,8 @@ vue3-template-nuxt3
    - 前缀为动词， eg：`add / update / delete / detail / get`
 5. CSS 命名（非必要尽量使用unocss）
    - 优先使用 unocss 方法
-   - 采用 [BEM](https://gitee.com/link?target=http%3A%2F%2Fgetbem.com%2F) 的命名规范：block-name -- element-name - modifier-name，也就是 `模块名--元素名-修饰器名`。
-   - scss / less 中的变量、函数、混合 采用 `camelCase` 风格
+   - 或采用 [BEM](https://gitee.com/link?target=http%3A%2F%2Fgetbem.com%2F) 的命名规范：block-name -- element-name - modifier-name，也就是 `模块名--元素名-修饰器名`。
+   - less 中的变量、函数、混合 采用 `camelCase` 风格
 6. 需要 TS 类型的文件，在types目录下新建同名 `.d.ts` 文件
 
 ### 一些操作规范
@@ -77,7 +77,7 @@ vue3-template-nuxt3
 ├── components                    # 项目组件
 ├── composables                   # 响应式共享状态
 ├── config                        # 工程化构建相关配置
-├── enums                         # 枚举管理
+├── constants                     # 常量配置、枚举管理
 ├── layouts                       # 布局组件
 ├── middleware                    # 路由中间件
 ├── pages                         # 页面视图
@@ -85,6 +85,7 @@ vue3-template-nuxt3
 ├── public                        # 不需要工程化处理的静态资源
 ├── server                        # 服务器端目录
 ├── types                         # 各个模块对应的 TS 类型编写
+├── .env.xxx                      # 环境变量
 ├── app.config.ts                 # 静态应用配置
 ├── app.vue                       # 入口页面
 ├── eslint.config.js              # eslint代码规范检查配置
