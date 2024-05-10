@@ -2,13 +2,13 @@
  * @Author       : Archer<ahh666@qq.com>
  * @Date         : 2024-04-10 18:00:05
  * @LastEditors  : Archer<ahh666@qq.com>
- * @LastEditTime : 2024-04-19 14:44:20
+ * @LastEditTime : 2024-05-10 17:58:29
  * @FilePath     : \vue3-template-nuxt3\composables\request.ts
  * @Description  : Description
  */
 
 import type { UseFetchOptions } from 'nuxt/app'
-import { token } from '~/api/token'
+import { Message } from 'tdesign-vue-next'
 import { RequestCodeEnum } from '~/constants/enums'
 
 interface DefaultResult<T = any> {
@@ -34,23 +34,20 @@ interface RequestConfig<T = any> extends HttpOption<T> {
 }
 
 async function requestHandler<T>(url: UrlType, params: any, options: RequestConfig<T>): Promise<DefaultResult<T> | T> {
+  // 请求头配置
   const headers = {
-    Authorization: token,
-    LoginStatus: 'true',
   }
+
   const method = ((options?.method || 'GET') as string).toUpperCase()
 
   const runtimeConfig = useRuntimeConfig()
-  const nuxtApp = useNuxtApp()
-  // const { $message, $login } = nuxtApp
-  const { apiBase } = runtimeConfig.public
+  const { baseUrl } = runtimeConfig.public
 
-  const baseURL = `${apiBase}/api/`
+  const baseURL = `${baseUrl}/api/`
 
   // 处理用户信息过期
   const hanlerTokenOverdue = async () => {
-    const { _route } = nuxtApp
-    // await $login(_route?.fullPath) TODO
+    // TODO
   }
 
   // 处理报错异常
@@ -58,7 +55,7 @@ async function requestHandler<T>(url: UrlType, params: any, options: RequestConf
     if (import.meta.server)
       showError({ message: msg, statusCode: 500 })
     else
-      console.log('err:', msg)
+      Message.error(msg)
   }
 
   const { data, error } = await useFetch(url, {
@@ -67,12 +64,16 @@ async function requestHandler<T>(url: UrlType, params: any, options: RequestConf
     onRequest({ request, options }) {
       // 请求拦截
     },
+    onResponse() {
+      //
+    },
     // credentials: 'include',
     params: method === 'GET' ? params : undefined,
     body: method === 'POST' ? JSON.stringify(params) : undefined,
     ...options,
   })
 
+  // eslint-disable-next-line no-console
   console.log(url, data.value)
 
   const responseData = data.value as DefaultResult<T>
