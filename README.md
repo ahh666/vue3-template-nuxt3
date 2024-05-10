@@ -4,7 +4,7 @@ vue3-template-nuxt3
 
 ## 技术栈
 
-**💥** Vue3 + Vite + Nuxt + TS + Less + Pinia + Vueuse
+**💥** Vue3 + Vite + Nuxt3 + TS + Less + Pinia + Vueuse
 
 ## 特性
 

@@ -1,7 +1,7 @@
 import { pwa } from './config/pwa'
 import { runtimeConfig } from './config/runtimeConfig'
 import { routeRules } from './config/routeRules'
-import { appDescription } from './constants/index'
+import { app } from './config/app'
 
 export default defineNuxtConfig({
   modules: [
@@ -11,7 +11,14 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@vite-pwa/nuxt',
     '@nuxt/eslint',
+    '@tdesign-vue-next/nuxt',
   ],
+
+  // 其他 @tdesign-vue-next/nuxt 的相关配置
+  // tdesign: {
+  //   resolveIcons: true
+  //   ...
+  // }
 
   experimental: {
     // when using generate, payload js assets included in sw precache manifest
@@ -42,23 +49,7 @@ export default defineNuxtConfig({
     },
   },
 
-  app: {
-    head: {
-      viewport: 'width=device-width,initial-scale=1',
-      link: [
-        { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
-        { rel: 'icon', type: 'image/svg+xml', href: '/nuxt.svg' },
-        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
-      ],
-      meta: [
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: appDescription },
-        { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
-        { name: 'theme-color', media: '(prefers-color-scheme: light)', content: 'white' },
-        { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#222222' },
-      ],
-    },
-  },
+  app,
 
   devtools: {
     enabled: true,
