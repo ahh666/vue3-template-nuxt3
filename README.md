@@ -30,9 +30,9 @@ vue3-template-nuxt3
 
 ## 项目启动
 
-> pnpm 未安装，请先安装 `npm -g pnpm`
+> pnpm 未安装，请先安装 `npm i -g pnpm`
 
-- `git clone http://114.55.87.223/aihuanhuan/vue3-template-nuxt3.git`
+- `git clone https://github.com/ahh666/vue3-template-nuxt3.git`
 - `pnpm i`
 - `pnpm dev`
 
