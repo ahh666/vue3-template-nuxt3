@@ -7,7 +7,7 @@ console.log('runtimeConfig:', runtimeConfig)
 </script>
 
 <template>
-  <div text-center>
+  <div text-center py100px>
     <Logos mb-6 />
     <Suspense>
       <ClientOnly>

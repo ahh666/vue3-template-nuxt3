@@ -2,7 +2,7 @@
  * @Author       : Archer<ahh666@qq.com>
  * @Date         : 2024-04-12 16:54:05
  * @LastEditors  : Archer<ahh666@qq.com>
- * @LastEditTime : 2024-05-11 16:08:08
+ * @LastEditTime : 2024-05-11 16:14:15
  * @FilePath     : \vue3-template-nuxt3\components\Footer.vue
  * @Description  : Description
 -->
@@ -10,7 +10,7 @@
 <template>
   <footer h300px w100vw py55px flex justify-center>
     <div items-center w1200px flex justify-between>
-      <a inline-block href="https://www.pxb7.com/" blank="_self">
+      <a inline-block>
         <img w326px h90px src="/logo.png" alt="logo">
       </a>
       <div style="background: radial-gradient(#797979, hsla(0, 0%, 100%, 0) 71%)" w1px h186px />
